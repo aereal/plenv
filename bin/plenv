@@ -125,6 +125,13 @@ sub CMD_version {
     print "\n";
 }
 
+sub CMD_version_name {
+  home_init();
+
+  my ($version) = detect_version();
+  print "$version\n";
+}
+
 sub slurp_version {
     my $fname = shift;
     open my $fh, '<', $fname or die "$fname: $!";
